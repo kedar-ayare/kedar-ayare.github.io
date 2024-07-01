@@ -1,0 +1,175 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #22252A;
+}
+
+.main{
+    width: 80vw;
+    margin: auto;
+}
+
+.titleBox{
+    width: 100%;
+    text-align: center;
+    height: 14vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    margin: 0;
+    color: #C58754;
+}
+
+
+.description{
+    margin: 5vh 0 0 0;
+}
+
+#desc-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#desc-content{
+    color: white;
+    margin: 2vh 0 0 0;
+    font-weight: normal;
+}
+
+.ProblemStatement{
+    margin: 10vh 0 0 0;
+}
+
+#ProblemStatement-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#ProblemStatement-content{
+    color: white;
+    margin: 2vh 0 0 0;
+    font-weight: normal;
+}
+
+.features{
+    margin: 10vh 0 0 0;
+}
+
+#features-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#features-content{
+    color: white;
+    margin: 2vh 0 0 0;
+    font-weight: normal;
+}
+
+
+.flowdiag{
+    margin: 10vh 0 0 0;
+    width: 100%;
+}
+
+#flowdiag-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#flowdiag-content{
+    width: 50vw;
+    margin: auto;
+    margin-left: 15vw;
+    margin-top: 15vh;
+}
+
+
+.tech{
+    margin: 10vh 0 0 0;
+}
+
+#tech-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#tech-content{
+    color: white;
+    margin-top: 5vh;
+    font-weight: normal;
+}
+
+.ss{
+    margin: 10vh 0 0 0;
+}
+
+#ss-header{
+    margin: 0;
+    color: #C58754;
+}
+
+.ss-images{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#fr-ss{
+    width: 20vw;
+}
+
+.ss-box{
+    margin-bottom: 5vh;
+    color: white;
+    width: 40%;
+    /* background-color: #C58754; */
+}
+
+.challenges{
+    margin: 10vh 0 0 0;
+}
+
+#challenges-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#challenges-content{
+    color: white;
+    margin-top: 5vh;
+    font-weight: normal;
+}
+
+.results{
+    margin: 10vh 0 10vh 0;
+}
+
+#results-header{
+    margin: 0;
+    color: #C58754;
+}
+
+#results-content{
+    color: white;
+    margin-top: 5vh;
+    font-weight: normal;
+}
+
+.cctvImgBox{
+    width: 100%;
+    text-align: center;
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+}
+
+#cctvImg{
+    width: 30%;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Info | Class Attendance</title>
+    <link rel="stylesheet" href="../css/projectInfo.css">
+</head>
+<body>
+    <div class="main">
+        <div class="titleBox">
+            <h1 class="title">Class Attendace - Face Recognition </h1>
+        </div>
+        <div class="description">
+            <h2 id="desc-header">Description:</h2>
+            <h4 id="desc-content">An app that tracks class attandance using Face Recognition.</h4>
+        </div>
+        <div class="ProblemStatement">
+            <h2 id="ProblemStatement-header">Problem Statement:</h2>
+            <h4 id="ProblemStatement-content">To create an application that can detect faces from a picture, identify faces, and mark attendace for the same.</h4>
+        </div>
+
+        <div class="features">
+            <h2 id="features-header">Features:</h2>
+            <h4 id="features-content">Attendace Marking, Face Recognition</h4>
+        </div>
+
+        <div class="flowdiag">
+            <h2 id="flowdiag-header">Flow Diagram:</h2>
+            <img id="flowdiag-content" src="../assets/facerecogFlow.png">
+        </div>
+
+        <div class="tech">
+            <h2 id="tech-header">Technology Used + Development Process:</h2>
+            <h4 id="tech-content">
+                The Face Recognition system makes use of the face_recognition python library to perform maximum amount of tasks.
+The library helps to convert faces to a set of encodings where each encoding represents a spectific feature of the face like distance between the eyes, or length of forehead or the distance between lips and tip of the nose. <br><br>
+These encodings can be saved in a file system for further reference in the system.
+In our project, for a single person, we have used his/her multiple images to get the encodings which are then averaged before storing. <br><br>
+The backend of the system is created using Python Flask framework. When the endpoint recieves an image, it saves is to a temporary folder on the server and passes namepath to the face recognition code.
+The face recognition code then gets encodings of all faces in the image and matches it with the encodings already present in the system. It then sends a list of all matched faces back to the frontend.<br><br>
+
+The front end is a simple Flutter app that makes use of the system camera to assist user in capturing images which can be then send to the backend for processing. <br>
+Once completed, user can see a list of present and absent students.
+            </h4>
+        </div>
+
+
+        <div class="ss">
+            <h2 id="ss-header">Screenshots:</h2>
+            <div class="ss-images">
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">1. Login / Register Screen</h3>
+                    <img src="../assets/fr-ss1.jpg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">2. Home Screen</h3>
+                    <img src="../assets/fr-ss2.jpg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">3. Camera Interface</h3>
+                    <img src="../assets/fr-ss3.jpg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">4. Class List</h3>
+                    <img src="../assets/fr-ss4.jpg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">5. Faces Identified by backend</h3>
+                    <img src="../assets/fr-ss5.png" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">6. List of present/absent students</h3>
+                    <img src="../assets/fr-ss6.jpg" id="fr-ss">
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="challenges">
+            <h2 id="challenges-header">Challenges Faced:</h2>
+            <h4 id="challenges-content">The main challenge faced was to tunnel the backend running on our local machine since the app was running on our mobild devices.<br><br>
+                For this purpose, we used a tool called NGrok, which tunnels a port of the local machine such that it can be accessed from anywhere using internet and hence our app could sent requests to our backend.</h4>
+        </div>
+
+        <div class="results">
+            <h2 id="results-header">Results:</h2>
+            <h4 id="results-content">The App provides an easy and clean interface for the user.<br><br>
+                The face recognition process detects faces based on object detection and weight calculation, hence results are affected by the picture quality which can be limited by the camera specification of the device.</h4>
+        </div>
+    </div>
+</body>
+</html>

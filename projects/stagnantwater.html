@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Info | Stagnant Water</title>
+    <link rel="stylesheet" href="../css/stagnantwater.css">
+</head>
+<body>
+    <div class="main">
+        <div class="titleBox">
+            <h1 class="title">Stagnant Water Detection</h1>
+        </div>
+        <div class="description">
+            <h2 id="desc-header">Description:</h2>
+            <h4 id="desc-content">A system that makes use of CNN network to detect stagnant water instances.</h4>
+        </div>
+        <div class="ProblemStatement">
+            <h2 id="ProblemStatement-header">Problem Statement:</h2>
+            <h4 id="ProblemStatement-content">To create an application that can make use of public security camera infrastructure to detect stagnant water in public places and hence help respective authorities to take appropriate decisions</h4>
+        </div>
+
+        <div class="features">
+            <h2 id="features-header">Features:</h2>
+            <h4 id="features-content">Stagnant water detection, Alert Scheduling</h4>
+        </div>
+
+        <!-- <div class="flowdiag">
+            <h2 id="flowdiag-header">Flow Diagram:</h2>
+            <img id="flowdiag-content" src="assets/facerecogFlow.png">
+        </div> -->
+
+        <div class="tech">
+            <h2 id="tech-header">Technology Used + Development Process:</h2>
+            <h4 id="tech-content">
+                The System makes use of a version of RCNN called Masked R-CNN. The system is trained with over 2000+ images of stagnant water instances.<br><br>
+                The system needed the images to have bounding boxes marked in COCOMO format, hence we used a third party website to mark all images manually.
+The markings just included one class called "water" for boxes indicating water.<br><br>
+The algorithm was trained with the help of Google Collab platform till 5 epochs. The output file was used for testing and then final excutions of the project.<br><br>
+
+                
+To demonstrate and test videos from a CCTV camera perspective, we added filters to images and then used them for execution. <br><br>
+<div class="cctvImgBox">
+    <img src="../assets/frame0.jpg" id="cctvImg">
+    <h3>Image with CCTV filter</h3>
+</div>
+The system also uses a simple frontend website made in HTML + CSS. The backend system, once done with image processing sends all needed data to the website server, where all images are stored in a dedicated folder and other information in stored in a JSON file.<br><br>
+The website uses the same JSON file to display report for a particulat CCTV camera for a particular day, using which reponsible authorities can take actions.
+            </h4>
+        </div>
+
+
+        <div class="ss">
+            <h2 id="ss-header">Screenshots:</h2>
+            <div class="ss-images">
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">1. Original Image 1</h3>
+                    <img src="../assets/stagwater-01.jpeg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">2. Processed Image 1</h3>
+                    <img src="../assets/stagwater-02.jpg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">3. Original Image 2</h3>
+                    <img src="../assets/stagwater-03.jpeg" id="fr-ss">
+                </div>
+                <div class="ss-box">
+                    <h3 id="fr-ss-header">4. Processed Image 2</h3>
+                    <img src="../assets/stagwater-04.jpg" id="fr-ss">
+                </div>                  
+            </div>
+        </div>
+
+        <div class="challenges">
+            <h2 id="challenges-header">Challenges Faced:</h2>
+            <h4 id="challenges-content">The main issue faced was the need of images to be a specific format (COCOMO) and hence the manual labelling of the images. <br>
+                The next basic challenge was computing power in order to perform the needed processing. But we used Google Collab for training and some other roundabouts for some other computing heavy tasks.</h4>
+        </div>
+
+        <div class="results">
+            <h2 id="results-header">Results:</h2>
+            <h4 id="results-content">
+                The App provides an easy and clean interface for authorities to view reports of various regions and take necessary actions.
+            </h4>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+<!-- 
+Title:
+Stagnant Water Detection ( Final Year Project )
+
+Short Description:
+A system that makes use of CNN network to detect stagnant water instances.
+
+Problem Statemnt:
+To create an application that can make use of public security camera infrastructure to detect stagnant water in public places and hence help respective authorities to take appropriate decisions
+
+Features:
+Stagnant water detection, Alert Scheduling
+
+System Flow diagram:(optional)
+
+Technologies used + Development Process:
+The System makes use of a version of RCNN called Masked R-CNN. The system is trained with over 2000+ images of stagnant water instances.
+The system needed the images to have bounding boxes marked in COCOMO format, hence we used a third party website to mark all images manually.
+The markings just included one class called "water" for boxes indicating water.
+The algorithm was trained with the help of Google Collab platform till 5 epochs. The output file was used for testing and then final excutions of the project.
+
+To demonstrate and tet videos from a CCTV camera perspective, we added filters to images and then used them for execution.
+The system also uses a simple frontend website made in HTML + CSS. The backend system, once done with image processing sends all needed data to the website server, where all images are stored in a dedicated folder and other information in stored in a JSON file.
+The website uses the same JSON file to display report for a particulat CCTV camera for a particular day, using which reponsible authorities can take actions.
+
+
+Screenshots:
+
+
+Challenges faced:
+The main issue faced was the need of images to be a specific format (COCOMO) and hence the manual labelling of the images. The next basic challenge was computing power in order to perform the needed processing. But we used Google Collab for training and some other roundabouts for some other computing heavy tasks.
+
+Results 
+The App provides an easy and clean interface for authorities to view reports of various regions and take necessary actions.
+-->
