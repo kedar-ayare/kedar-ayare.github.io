@@ -119,3 +119,7 @@ input:focus, textarea:focus{
 .socio-card h2{
     margin: 0;
 }
+
+.social-anchor, .social-anchor:hover, .social-anchor:active, .social-anchor:visited{
+    text-decoration: none;
+}

@@ -4,41 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home | Kedar Ayare</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        .div3 {
-            position: relative;
-            width: 200px;
-            /* Set the width and height as per your requirements */
-            height: 200px;
-            overflow: hidden;
-            /* Hide any overflowing content (like div2 sliding in) */
-        }
-
-        .div1,
-        .div2 {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 20px;
-            color: #fff;
-            background-color: #333;
-            transition: transform 0.5s ease;
-            /* CSS transition for smooth animation */
-        }
-
-        .div2 {
-            transform: translateY(100%);
-        }
-
-        .div3:hover .div2 {
-            transform: translateY(0);
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color:#C58754;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const backToTopButton = document.getElementById('back-to-top');
+    
+            // Show/hide button on scroll
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 300) {  // Adjust this value as needed
+                    backToTopButton.style.display = 'block';
+                } else {
+                    backToTopButton.style.display = 'none';
+                }
+            });
+    
+            // Smooth scroll to top
+            backToTopButton.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    
+    
 </head>
 
 <body>
@@ -59,9 +64,9 @@
                     <h3>Kedar Ayare</h3>
                 </div>
                 <div class="navOpts">
-                    <a>Home</a>
-                    <a>About Me</a>
-                    <a>Projects</a>
+                    <!-- <a>Home</a> -->
+                    <!-- <a href="#aboutMe">About Me</a> -->
+                    <a href="#projects">Projects</a>
                     <a href="contact.html">Contact</a>
                 </div>
             </header>
@@ -85,7 +90,7 @@
                             possible.</p>
                     </div>
                     <div class="knowme">
-                        <a>
+                        <a href="#aboutMe" id="aboutMeBtn">
                             Know more about me
                         </a>
                     </div>
@@ -99,7 +104,7 @@
     </div>
 
 
-    <div class="aboutMe">
+    <div class="aboutMe" id="aboutMe"> 
         <div class="aboutmeContent">
             <div class="imagesBox">
                 <img src="assets/profile.png" id="profilepic">
@@ -127,7 +132,7 @@
         </div>
     </div>
 
-    <div class="projects">
+    <div class="projects" id="projects">
         <div class="projectsHeader">
             <h1>Projetcs</h1>
             <div class="projectsLine"></div>
@@ -147,40 +152,73 @@
             </a>
             <a class="projectCard" href="projects/stagnantwater.html">
                 <div class="projectCardContent">
-                    <img src="assets/face.png" id="projectImg">
+                    <img src="assets/water-waves.png" id="projectImg">
                     <h2>Stagnant Water Detection</h2>
                     <div class="techLogos">
-                        <img src="assets/flutter.png" id="techlogo">
+                        
                         <img src="assets/python.png" id="techlogo">
                         <img src="assets/json.png" id="techlogo">
+                        <img src="assets/php.png" id="techlogo">
                     </div>
                 </div>
             </a>
             <a class="projectCard" href="projects/acroQuest.html">
                 <div class="projectCardContent">
-                    <img src="assets/face.png" id="projectImg">
+                    <img src="assets/quote.png" id="projectImg">
                     <h2>AcroQuest - An Acronym App</h2>
                     <div class="techLogos">
-                        <img src="assets/flutter.png" id="techlogo">
-                        <img src="assets/python.png" id="techlogo">
-                        <img src="assets/json.png" id="techlogo">
+                        <img src="assets/react-native.png" id="techlogo">
+                        <img src="assets/node.png" id="techlogo">
+                        <img src="assets/mongo.png" id="techlogo">
                     </div>
                 </div>
             </a>
             <a class="projectCard" href="projects/familyTree.html">
                 <div class="projectCardContent">
-                    <img src="assets/face.png" id="projectImg">
+                    <img src="assets/family-tree.png" id="projectImg">
                     <h2>My Family Tree - Social Media for Family</h2>
                     <div class="techLogos">
-                        <img src="assets/flutter.png" id="techlogo">
-                        <img src="assets/python.png" id="techlogo">
-                        <img src="assets/json.png" id="techlogo">
+                        <img src="assets/react-native.png" id="techlogo">
+                        <img src="assets/node.png" id="techlogo">
+                        <img src="assets/mongo.png" id="techlogo">
                     </div>
                 </div>
             </a>
 
         </div>
     </div>
+    <footer>
+        <div class="footer-content">
+            <div class="socials">
+                <div class="social-container">
+                    <a class="social-anchor">
+                        <img class="socio-logo" src="assets/linkedin-sign.png">
+                    </a>
+                </div>
+                <div class="social-container">
+                    <a class="social-anchor">
+                        <img class="socio-logo" src="assets/github-sign (1).png">
+                    </a>
+                </div>
+                <div class="social-container" id="last-social">
+                    <a class="social-anchor">
+                        <img class="socio-logo" src="assets/instagram (1).png">
+                    </a>
+                </div>
+                
+            </div>
+            <div class="contact-info">
+                <div class="contact-container">
+                    <span>kedarayareilr@gmail.com</span>
+                </div>
+                <div class="contact-container" id="last-contact">
+                    <span>+91 86920 56124</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" style="display: none;">Back to Top</button>
 </body>
 
 </html>
