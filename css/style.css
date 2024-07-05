@@ -410,3 +410,121 @@ footer{
 #last-contact{
     border: none;
 }
+
+
+
+/* ---------------Experience-------------------- */
+
+
+.experience{
+    background-color: #282D31;
+    /* background-color: azure; */
+    display: flex;
+    flex-direction: row;
+}
+.vertical-title{
+    padding-top: 3%;
+    /* background-color: aqua; */
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-start;
+    align-items: center;
+}
+
+.vertical-title h1{
+    writing-mode:vertical-rl;
+    rotate: 180deg;
+    margin: 0;
+    font-size: 48px;
+    font-family: "Judson", serif;
+    font-weight: 500;
+    font-style: bold;
+    color: white;
+}
+
+.experience-content{
+    /* height: 100vh; */
+    width: 85%;
+    /* background-color: white; */
+    padding: 3% 0 5% 0;
+}
+
+
+
+.experience-row{
+    /* width: 8%; */
+    
+    display: flex;
+    flex-direction: row;
+}
+
+
+.side-bar{
+    width: 10%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.experience-card{
+    background-color: #22252A;
+    padding: 2% 5%;
+    width: 80%;
+    /* background-color: aliceblue; */
+}
+.pos-time{
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    color: white;
+    /* font-family: "Judson", serif; */
+}
+
+#pos,#time{
+    margin: 0;
+}
+#pos{
+    margin-right: 3%;
+}
+
+
+
+.company{
+    color: #C58754;
+}
+
+#company{
+    margin:0;
+    margin-top: 2%;
+    font-size: x-large;
+}
+
+
+.bar{
+    height: 100%;
+    width: 8%;
+    background-color: #C58754;
+    border-radius: 100px;
+}
+
+.dot-row{
+    width: 100%;
+    /* background-color: #C58754; */
+    height: 5%;
+    padding: 2% 0;
+}
+.dot-box{
+    width: 10%;
+    height: 100%;
+    /* background-color: darkblue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot{
+    width: 8%;
+    aspect-ratio: 1;
+    background-color: white;
+    border-radius: 100px;
+}
