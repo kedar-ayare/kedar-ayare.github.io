@@ -528,3 +528,263 @@ footer{
     background-color: white;
     border-radius: 100px;
 }
+
+
+
+/* Extra Curricular */
+
+.extra-curr{
+    background-color: #22252A;
+}
+
+.extra-curr-title{
+    width: 100%;
+    text-align: center;
+    padding: 3% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.extra-curr-title h1{
+    margin: 0;
+    color: white;
+}
+
+.extra-curr-title-bottom{
+    width: 20%;
+    height: 5px;
+    background-color: #C58754;
+    margin-top: 2%;
+}
+
+
+
+
+
+.extra-curr-main{
+    width: 90%;
+    margin: auto;
+    background-color: #C58754;
+    display: flex;
+    flex-direction: row;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+.left-btn, .right-btn{
+    width: 8%;
+    background-color: gold;
+    /* height: 10vh; */
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    color: white;
+}
+
+.left-btn:hover, .right-btn:hover{
+    cursor: pointer;
+}
+
+.extra-curr-container{
+    width: 84%;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: none;
+    /* position: relative; */
+    /* overflow: hidden; */
+}
+
+
+
+
+
+
+.extra-curr-card{
+    width: 50%;
+    background-color: #282D31;
+    margin: 0 5%;
+}
+
+.extra-curr-card-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.extra-curr-title-image{
+    width: 18%;
+    /* background-color: aliceblue; */
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.extra-curr-title-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.extra-curr-card h2, .extra-curr-card h4{
+    margin: 0;
+}
+
+.extra-curr-card h2{
+    color: white;
+    font-weight:normal;
+}
+
+.extra-curr-card h4{
+    color: #C58754;
+    font-weight: normal;
+}
+
+.extra-curr-content{
+    width: 90%;
+    padding: 0px 5% 20px 5% ;
+    /* background-color: antiquewhite; */
+    color: #B0B0B0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.test{
+    background-color: #22252A;
+}
+
+#wrapper {
+    max-width: 80%;
+    margin: auto;
+    width: 100%;
+    /* border: 2px solid #e2e2e2; */
+    border-color: #bbbbbb;
+    border-radius: 4px;
+}
+
+#carousel {
+    /* position: relative; */
+    display: flex;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.square {
+    cursor: pointer;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    color: #bbbbbb;
+    font-size: 50px;
+    min-width: 35%;
+    /* height: 20; */
+    background-color: #ffffff14;
+    margin: 20px;
+    transition: 100ms ease-in-out;
+    padding: 15px;
+}
+
+.square:hover{
+    background-color: #ffffff27;
+    border-color: #f4f4f4;
+    color: #d2d2d2;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+
+#carousel-btn {
+    cursor: pointer;
+    margin: 10px 10px;
+    font-size: 30px;
+    color: #bbbbbb;
+    /* border: 2px solid #bbbbbb; */
+    /* border-color: #bbbbbb; */
+    border: none;
+    border-radius: 7px;
+    height: 40px;
+    width: 60px;
+    transition: 60ms ease-in-out;
+    background-color:#22252A;
+    color: #ffffff14;
+}
+
+#carousel-btn:hover {
+    /* border-color: #f4f4f4; */
+    /* color: #f4f4f4; */
+    color: #C58754;
+}
+
+
+.square-title{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.title-image-box{
+    width: 20%;
+    aspect-ratio: 1;
+    /* background-color: #B0B0B0; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-image-box img{
+    width: 55%;
+}
+
+.title-text{
+    width: 82%;
+    padding: 0px 0 0 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* background-color: aqua; */
+}
+
+
+
+#title-header{
+    margin: 0;
+    color: white;
+    font-size: 28px;
+    font-weight: normal;
+}
+
+#title-org{
+    margin: 0;
+    color: #C58754;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.square-content{
+    width: 90%;
+    padding: 10px 5%;
+    font-size: 15px;
+}

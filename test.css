@@ -1,0 +1,80 @@
+@import url(https://fonts.googleapis.com/css?family=Fredoka+One);
+
+* {
+    font-family: "Fredoka One";
+    user-select: none;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh);
+    margin: 0px;
+    padding: 60px;
+    background: radial-gradient(#373947, #212333);
+}
+
+#wrapper {
+    max-width: 700px;
+    width: 100%;
+    border: 2px solid #e2e2e2;
+    border-color: #bbbbbb;
+    border-radius: 4px;
+}
+
+#carousel {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+}
+
+.square {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #bbbbbb;
+    font-size: 50px;
+    min-width: 200px;
+    height: 200px;
+    background-color: #ffffff14;
+    border-radius: 6px;
+    margin: 20px;
+    transition: 100ms ease-in-out;
+}
+
+.square:hover{
+    background-color: #ffffff27;
+    border-color: #f4f4f4;
+    color: #d2d2d2;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+}
+
+button {
+    cursor: pointer;
+    margin: 10px 10px;
+    font-size: 20px;
+    background-color: unset;
+    color: #bbbbbb;
+    border: 2px solid #bbbbbb;
+    border-color: #bbbbbb;
+    border-radius: 7px;
+    height: 40px;
+    width: 60px;
+    transition: 60ms ease-in-out;
+}
+
+button:hover {
+    border-color: #f4f4f4;
+    color: #f4f4f4;
+}
