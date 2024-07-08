@@ -452,7 +452,47 @@
         </div>
     </div>
 
-    <footer>
+    <div class="contact">
+        <div class="contact-content">
+            <div class="contact-header">
+                <div class="contact-header-main">
+                    <div class="contact-title">
+                        <h1>Get In Touch</h1>
+                    </div>
+                    <div class="contact-info">
+                        <h3><img src="assets/phone-call.png" id="contact-img">+91 86920 56124</h3>
+                        <h3><img src="assets/mail.png" id="contact-img">kedarayareilr@gmail.com</h3>
+                    </div>
+                </div>
+                <div class="contact-header-divider">
+
+                </div>
+                
+            </div>
+            <div class="contact-main">
+                <div class="contact-form">
+                    <div class="form-row1">
+                        <input type="text" placeholder="Name">
+                        <input type="text" placeholder="Email or Phone">
+                    </div>
+                    <input type="text" placeholder="Subject">
+                    <textarea rows="10" placeholder="Message"></textarea>
+                    <div class="btn-box">
+                        <button id="submit-btn">Send</button>
+                    </div>
+                    
+                </div>
+                <div class="contact-map">
+                    <div class="mapframe">
+                        <iframe id="map-iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d471.13577139580667!2d72.93370830824746!3d19.14770495247085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b86fe28195b9%3A0x300d71f856c026c9!2sCharming%20Apartments%2C%20Nrityanjali%20Rd%2C%20Satyavijay%20Society%2C%20Miniland%2C%20Panchsheel%20Nagar%2C%20Bhandup%20West%2C%20Mumbai%2C%20Maharashtra%20400078!5e0!3m2!1sen!2sin!4v1720419149664!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <footer>
         <div class="footer-content">
             <div class="socials">
                 <div class="social-container">
@@ -481,10 +521,12 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 
     <button id="back-to-top" style="display: none;">Back to Top</button>
 </body>
+
+
 <script>
     const willLeftLessThan40pxToScrollEnd = (nextStep) => {
         const scrollLeftAfterTwoClicks = carousel.scrollLeft + (nextStep*2)
