@@ -4,9 +4,10 @@
     // Set the file path and name
     // $file_path = "queries.json";
 
-    // //   echo "Kedar";
+    echo "Kedar";
 
-    // //   echo $_GET['name'];
+    echo $_GET['name'];
+    echo $_GET['subject']
 
     // // Get the contents of the JSON file
     // $file_contents = file_get_contents($file_path);
