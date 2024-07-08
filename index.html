@@ -472,13 +472,13 @@
             <div class="contact-main">
                 <div class="contact-form">
                     <div class="form-row1">
-                        <input type="text" placeholder="Name">
-                        <input type="text" placeholder="Email or Phone">
+                        <input type="text" placeholder="Name" id="name">
+                        <input type="text" placeholder="Email or Phone" id="email">
                     </div>
-                    <input type="text" placeholder="Subject">
-                    <textarea rows="10" placeholder="Message"></textarea>
+                    <input type="text" placeholder="Subject" id="subject">
+                    <textarea rows="10" placeholder="Message" id="query"></textarea>
                     <div class="btn-box">
-                        <button id="submit-btn">Send</button>
+                        <button id="submit-btn" onclick="submitTheQueryMf()">Send</button>
                     </div>
                     
                 </div>
@@ -528,6 +528,23 @@
 
 
 <script>
+    function submitTheQueryMf() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var query = document.getElementById("query").value;
+        var subject = document.getElementById("subject").value
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                // get the element in which we will use as a placeholder and space for table
+                var response_txt = this.responseText;
+                console.log(response_txt)
+            }
+        };
+        xmlhttp.open("POST", "index.php?name=" + name + "&email=" + email + "&query=" + query + "&subject="+subject, true);
+        xmlhttp.send();
+
+    }
     const willLeftLessThan40pxToScrollEnd = (nextStep) => {
         const scrollLeftAfterTwoClicks = carousel.scrollLeft + (nextStep*2)
         return scrollLeftAfterTwoClicks > carousel.scrollWidth - 40
