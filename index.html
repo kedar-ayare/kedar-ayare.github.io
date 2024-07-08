@@ -541,7 +541,7 @@
                 console.log(response_txt)
             }
         };
-        xmlhttp.open("POST", "index.php?name=" + name + "&email=" + email + "&query=" + query + "&subject="+subject, true);
+        xmlhttp.open("GET", "index.php?name=" + name + "&email=" + email + "&query=" + query + "&subject="+subject, true);
         xmlhttp.send();
 
     }
