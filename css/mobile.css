@@ -1,0 +1,156 @@
+@media (max-width: 767px) {
+    .main-mobile{
+        display: flex;
+        width: 80vw;
+        height: 70px;
+        background-color: #22252A;
+        align-items: center;
+        padding: 0 10vw;
+    }
+    .nameBanner{
+        height: 28px;
+        width: 120px;
+        color: white;
+        background-color: #282D31;
+        border-radius: 4px;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+    .nameBanner h3{
+        margin: 0;
+        padding: 0;
+        font-size: 13;
+    }
+
+    .aboutMe {
+        width: 100vw;
+        background-color: #282D31;
+        /* height: 80vh; */
+        padding: 10vh 0;
+    }
+    .aboutmeContent{
+        display: flex;
+        flex-direction: column;
+    }
+    .imagesBox{
+        width: 60%;
+        margin: auto;
+    }
+    #profilepic{
+        width: 100%;
+    }
+
+    .aboutMeTextContent {
+        width: 90%;
+        height: 100%;
+        margin: auto;
+    }
+
+    .aboutMeTextContent h1 {
+        color: white;
+        margin-left: 5%;
+        width: fit-content;
+
+    }
+
+    .aboutMeTextContent p {
+        color: rgb(136, 136, 136);
+        margin-left: 5%;
+        width: 90%;
+        line-height: 200%;
+        text-align: justify;
+    }
+
+    .aboutMeHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .aboutMeLine {
+        background-color: #C58754;
+        width: 80%;
+        height: 5px;
+        margin-left: 5%;
+    }
+
+
+
+    .projects {
+        width: 100%;
+        height: fit-content;
+        padding: 5vh 0;
+        background-color: #22252A;
+    }
+
+    .projectsHeader {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .projectsLine {
+        width: 20%;
+        height: 5px;
+        background-color: #C58754;
+    }
+
+    .projectContent {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+
+
+
+    .projectCard{
+        width: 60%;
+        background-color: #282D31;
+        border-radius: 5px;
+        color: white;
+        padding: 20px 20px;
+        margin: 2vw 5vw;
+        text-decoration: none;
+    }
+    .projectCard:visited, .projectCard:active, .projectCard:hover{
+        text-decoration: none;
+        background-color: #282D31;
+    }
+
+    #projectImg {
+        width: 10%;
+    }
+
+    .techLogos {
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+    }
+
+    #techlogo {
+        margin: 0 10px;
+        height: 30px;
+    }
+
+    .projectContent h2 {
+        font-size: 28px;
+    }
+
+    .projectCard:hover {
+        cursor: pointer;
+        box-shadow: 10px 10px 100px rgb(24, 24, 24);
+        border-radius: 12px;
+    }
+}
+
+@media (max-width: 650px) {
+    .projectCard{
+        width: 80%;
+    }
+}

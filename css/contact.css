@@ -109,6 +109,9 @@ input:focus, textarea:focus{
     border-bottom: 1px solid rgba(234, 234, 234, 0.2);
     padding: 5vh 10vh;
 }
+a,a:visited,a:active{
+    text-decoration: none;
+}
 .socio-card:hover{
     cursor: pointer;
 }

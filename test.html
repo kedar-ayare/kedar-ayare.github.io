@@ -3,61 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="test.css">
-    <script>
-        const willLeftLessThan40pxToScrollEnd = (nextStep) => {
-    const scrollLeftAfterTwoClicks = carousel.scrollLeft + (nextStep*2)
-    return scrollLeftAfterTwoClicks > carousel.scrollWidth - 40
-}
+    <title>Stacking Divs in Page Flow with Z-Index</title>
+    <style>
+        /* Container to hold the divs */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+        }
 
-const willLeftLessThan40pxToScrollStart = (nextStep) => {
-    const scrollLeftAfterOneClick = carousel.scrollLeft - nextStep
-    return scrollLeftAfterOneClick < 40
-}
+        /* Divs inside the container */
+        .div1, .div2 {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative; /* Required for child absolute positioning */
+        }
 
-const handleClickGoAhead = () => {
-    let nextStep = carousel.offsetWidth
-    if(willLeftLessThan40pxToScrollEnd(nextStep)) nextStep *= 2
+        .div1 {
+            background-color: rgba(255, 0, 0, 0.5); /* Red with transparency */
+        }
 
-    carousel.scroll({
-      left: carousel.scrollLeft + nextStep,
-      behavior: "smooth"
-    })
-}
+        .div2 {
+            background-color: rgba(0, 0, 255, 0.5); /* Blue with transparency */
+        }
 
-const handleClickGoBack = () => {
-    let nextStep = carousel.offsetWidth
-    if(willLeftLessThan40pxToScrollStart(nextStep)) nextStep *= 2
-    
-    carousel.scroll({
-      left: carousel.scrollLeft - nextStep,
-      behavior: "smooth"
-    })
-}
+        /* Child divs inside div1 */
+        .child1, .child2 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-    </script>
+        .child1 {
+            background-color: rgba(0, 255, 0, 0.5); /* Green with transparency */
+            z-index: 1; /* Lower z-index */
+        }
+
+        .child2 {
+            background-color: rgba(255, 255, 0, 0.5); /* Yellow with transparency */
+            z-index: 2; /* Higher z-index */
+        }
+    </style>
 </head>
 <body>
-    <div id="wrapper">
-        <div id="carousel">
-            <div class="square"> 1 </div>
-            <div class="square"> 2 </div>
-            <div class="square"> 3 </div>
-            <div class="square"> 4 </div>
-            <div class="square"> 5 </div>
-            <div class="square"> 6 </div>
-            <div class="square"> 7 </div>
+    <div class="container">
+        <div class="div1">
+            <div class="child1">Child 1: This is below Child 2.</div>
+            <div class="child2">Child 2: This is above Child 1.</div>
         </div>
+        <div class="div2">Div 2: This is below Div 1.</div>
     </div>
-    <div class="buttons">
-        <button onclick="handleClickGoBack()">
-            <
-        </button>
-        <button onclick="handleClickGoAhead()">
-            >
-        </button>
-    </div>
-    
 </body>
 </html>

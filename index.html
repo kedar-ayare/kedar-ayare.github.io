@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Kedar Ayare</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     <style>
@@ -55,7 +58,7 @@
         <div class="div2">This is div 2</div>
     </div> -->
 
-    <div class="main">
+    <div class="main-desktop">
         <div class="mainSideBar">
             <div class="goldenLogo">
                 <h1>KA</h1>
@@ -67,8 +70,6 @@
                     <h3>Kedar Ayare</h3>
                 </div>
                 <div class="navOpts">
-                    <!-- <a>Home</a> -->
-                    <!-- <a href="#aboutMe">About Me</a> -->
                     <a href="#projects">Projects</a>
                     <a href="contact.html">Contact</a>
                 </div>
@@ -101,11 +102,13 @@
 
             </div>
         </div>
-
-
-
     </div>
 
+    <div class="main-mobile">
+        <div class="nameBanner">
+            <h3>Kedar Ayare</h3>
+        </div>
+    </div>
 
     <div class="aboutMe" id="aboutMe"> 
         <div class="aboutmeContent">
@@ -191,7 +194,7 @@
         </div>
     </div>
 
-    <div class="experience">
+    <!-- <div class="experience">
         <div class="vertical-title">
             <h1>Experience</h1>
         </div>
@@ -257,7 +260,7 @@
                 </div>
             </div> 
         </div>
-    </div>
+    </div> -->
 
     <!-- <div class="extra-curr">
         <div class="extra-curr-title">
@@ -452,7 +455,7 @@
         </div>
     </div>
 
-    <div class="contact">
+    <!-- <div class="contact">
         <div class="contact-content">
             <div class="contact-header">
                 <div class="contact-header-main">
@@ -490,7 +493,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <!-- <footer>
         <div class="footer-content">
@@ -554,11 +557,17 @@
         const scrollLeftAfterOneClick = carousel.scrollLeft - nextStep
         return scrollLeftAfterOneClick < 40
     }
-
     const handleClickGoAhead = () => {
         // let nextStep = carousel.offsetWidth
         // console.log("go ahead: ", nextStep)
         let nextStep = 400
+        if(window.innerWidth < 1000){
+            nextStep = 350
+        }else if(window.innerWidth < 900){
+            nextStep = 300
+        }else if(window.innerWidth < 800){
+            nextStep = 150
+        }
         if(willLeftLessThan40pxToScrollEnd(nextStep)) nextStep *= 2
 
         carousel.scroll({
@@ -566,7 +575,6 @@
             behavior: "smooth"
         })
     }
-
     const handleClickGoBack = () => {
         // let nextStep = carousel.offsetWidth
         let nextStep = 400
@@ -579,6 +587,7 @@
     }
 
 </script>
+
 </html>
 
 
