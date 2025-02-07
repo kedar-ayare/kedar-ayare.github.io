@@ -73,7 +73,7 @@
     <div class="aboutMe" id="aboutMe"> 
         <div class="aboutmeContent">
             <div class="imagesBox">
-                <img src="assets/profile.png" id="profilepic">
+                <img src="assets/profile1.png" id="profilepic">
             </div>
             <div class="aboutMeTextContent">
                 <div class="aboutMeHeader">
@@ -140,7 +140,7 @@
                     </div>
                 </div>
             </a>
-            <a class="projectCard" href="projects/familyTree.html">
+            <!-- <a class="projectCard" href="projects/familyTree.html">
                 <div class="projectCardContent">
                     <img src="assets/family-tree.png" id="projectImg">
                     <h2>My Family Tree - Social Media for Family</h2>
@@ -150,7 +150,7 @@
                         <img src="assets/mongo.png" id="techlogo">
                     </div>
                 </div>
-            </a>
+            </a> -->
 
         </div>
     </div>
@@ -437,26 +437,27 @@
     }
     const willLeftLessThan40pxToScrollEnd = (nextStep) => {
         const scrollLeftAfterTwoClicks = carousel.scrollLeft + (nextStep*2)
+        console.log(carousel.scrollLeft)
         return scrollLeftAfterTwoClicks > carousel.scrollWidth - 40
     }
 
     const willLeftLessThan40pxToScrollStart = (nextStep) => {
         const scrollLeftAfterOneClick = carousel.scrollLeft - nextStep
+        console.log(carousel.scrollLeft, scrollLeftAfterOneClick)
         return scrollLeftAfterOneClick < 40
     }
     const handleClickGoAhead = () => {
         // let nextStep = carousel.offsetWidth
         // console.log("go ahead: ", nextStep)
-        let nextStep = 400
-        if(window.innerWidth < 1000){
-            nextStep = 350
-        }else if(window.innerWidth < 900){
-            nextStep = 300
-        }else if(window.innerWidth < 800){
-            nextStep = 150
+        let nextStep = window.innerWidth
+        if(carousel.scrollLeft == 0){
+            console.log("inside")
+            nextStep += 20
         }
-        if(willLeftLessThan40pxToScrollEnd(nextStep)) nextStep *= 2
-
+        if(carousel.scrollLeft > 1400){
+            nextStep = 0
+        }
+        // if(willLeftLessThan40pxToScrollEnd(nextStep)) nextStep *= 2
         carousel.scroll({
             left: carousel.scrollLeft + nextStep,
             behavior: "smooth"
@@ -464,7 +465,7 @@
     }
     const handleClickGoBack = () => {
         // let nextStep = carousel.offsetWidth
-        let nextStep = 400
+        let nextStep = window.innerWidth
         if(willLeftLessThan40pxToScrollStart(nextStep)) nextStep *= 2
 
         carousel.scroll({

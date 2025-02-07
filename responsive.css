@@ -723,6 +723,7 @@
 
     #carousel {
         /* position: relative; */
+        width: 100%;
         display: flex;
         overflow: hidden;
         scroll-behavior: smooth;
@@ -735,13 +736,18 @@
         align-items: center; */
         color: #bbbbbb;
         font-size: 50px;
-        min-width: 90%;
+        /* min-width: 90%; */
         width: 90%;
+        flex-shrink: 0;
         /* height: 20; */
         background-color: #ffffff14;
         margin: 20px;
         transition: 100ms ease-in-out;
         padding: 15px;
+        flex-shrink: 0; /* Prevent resizing */
+        width: 100%; /* Take the full width of the carousel */
+        max-width: 100vw; /* Ensure it doesn't exceed the viewport width */
+        box-sizing: border-box; 
     }
 
     .square:hover{
@@ -794,6 +800,11 @@
         justify-content: center;
         align-items: center;
     }
+    #wrapper, .test {
+        width: 100%;
+        overflow-x: hidden; /* Prevent any overflow */
+    }
+    
 
     .title-image-box img{
         width: 55%;
